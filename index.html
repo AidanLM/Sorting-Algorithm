@@ -1,0 +1,62 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />,
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@531&display=swap"
+      rel="stylesheet"
+      
+    />
+  </head>
+  <body>
+
+    <video autoplay muted loop id="myVideo">
+      <source src="Video/dots.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video> 
+   
+    <div id="container"></div>
+    <script src="script.js"></script>
+    
+    <nav>
+      <button class="start nav" onClick="start()">Start</button>
+      <button class="refresh nav" onClick="refresh();">Refresh</button>
+    </nav>
+    <div class="container"></div>
+    <div class="explanation">
+      <h2><span class="highlight">Algo Explanation</span></h2>
+      <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'setup')">
+          Set-up
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'Steps')">
+          Steps
+        </button>
+        <a href="https://www.youtube.com/watch?v=kFeXwkgnQ9U" target="_blank">Reference</a>
+      </div>
+      <div class="explanation-wrapper">
+      <div id="setup" class="tabcontent">
+        <p>
+          - Every number is randomly generated between 1-10.<br />
+          - Every node is connected to the four nodes on its north, east, south,
+          west direction.<br />
+          - The higher the number is the higher the cost which the path avoids<br />
+        </p>
+      </div>
+      <div id="Steps" class="tabcontent">
+        <p>
+            -Start: Begin at the chosen starting node.<br />
+            -Explore Neighbors:<br />
+            Check each neighbor of the current node.<br />
+            Calculate the cost to reach the neighbor (current node's cost + neighbor's difficulty)<br />
+            If this cost is lower, update the neighbor's cost and mark the current node as its parent.<br />
+            -Choose Next: Select the unvisited node with the lowest cost.<br />
+            -Repeat: Continue exploring neighbors and choosing the next node until the end is reached or no more nodes are reachable.<br />
+        </p>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f6ff;
+    font-family: "Roboto Slab", serif;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(11, 40px);
+    grid-template-rows: repeat(15, 40px);
+    grid-row-gap: 13px;
+    grid-column-gap: 13px;
+  }
+
+  .highlight {
+    color: blue; /* Change to your desired color */ 
+  }
+
+  .explanation-wrapper {
+    background-color: white; /* Set background color to white */
+    padding: 20px; /* Add some padding for spacing */
+    margin: 10px;  /* Add some margin for separation */
+    border-radius: 5px; /* Add rounded corners (optional) */
+  }
+
+  #myVideo {
+    position: fixed;  /* Make the video fill the viewport*/
+    right: 0; 
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+  
+    z-index: -1; /* Place the video behind all other content */
+  }
+  
+  .container,  /* Assuming this contains your main site content */
+  .explanation { 
+    position: relative; /* Ensure content is positioned above the video */
+  }
+  
+  button {
+    width: 7em;
+  height: auto;
+  color: white;
+  border: 4px solid white;
+  font-size: 20px;
+  background-color: #f7977a;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  }
+  
+
+a {
+    color: #f7977a;
+  }
+  .node {
+    background-color: #8bcdcd;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .explanation {
+    max-width: 55vh;
+  }
+  
+  .tab button {
+    background-color: #ccc;
+  }
+  .tab button.active {
+    background-color: #f7977a;
+  }
+  .tabcontent {
+    display: none;
+    border: 1px solid #ccc;
+  }
+
+  @media only screen and (max-width: 600px) {
+    body {
+      margin-top: 1em;
+      font-size: small;
+    }
+    button {
+      border: 4px solid white;
+      font-size: 10px;
+      text-align: center;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(11, 28px);
+      grid-template-rows: repeat(15, 28px);
+      grid-row-gap: 8px;
+      grid-column-gap: 8px;
+    }
+  }
+  
